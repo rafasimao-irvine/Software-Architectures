@@ -48,3 +48,16 @@ class Model():
                 self.mybox[3] *= 1.2
                 self.pellets[index] = [randint(10, 380), randint(10, 280), 5, 5]
 
+    def get_nearest_pellet(self, point):
+        pellet = None
+        lower_dist = 1000
+        for p in self.pellets:
+            dist = abs(p[0] - point[0]) + abs(p[1] - point[1])
+            if dist < lower_dist:
+                lower_dist = dist
+                pellet = p
+
+        #print str(self.pellets)+" nearest: "+str(pellet)
+        return pellet
+
+
