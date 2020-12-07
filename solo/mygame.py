@@ -5,6 +5,9 @@ Main class of the game.
 @author: rafaelsimao, alfonsoaranzazu
 '''
 
+import os
+os.environ['SDL_AUDIODRIVER'] = 'dsp'
+
 #import sys 
 import pygame
 from consts import Consts
